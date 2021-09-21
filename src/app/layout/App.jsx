@@ -1,11 +1,25 @@
-import './styles.css';
+// import { Button } from "semantic-ui-react";
+import React from "react";
+import EventDashboard from "../../features/events/eventDashborad/EventDashboard";
+import { NavBar } from "../../features/nav/NavBar";
+import { Container } from "semantic-ui-react";
 
-function App() {
+
+export function App() {
   return (
-    <div className="App">
-      <h1>Re-vents</h1>
-    </div>
+    <React.Fragment>
+      <NavBar />
+
+      <Container className='main'>
+        <EventDashboard />
+      </Container>
+
+    </React.Fragment>
+
+
+    /* <button className="ui icon red button"><i className="user icon" /> CSS button</button>
+    <Button icon='user' content='React button' color='green' /> */
+
   );
 }
 
-export default App;
