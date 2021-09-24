@@ -1,12 +1,13 @@
 import { EventListItem } from "./EventListItem";
 
-export function EventList() {
+export function EventList({ events }) {
     return (
         <>
-            <EventListItem />
-            <EventListItem />
-            <EventListItem />
-            <EventListItem />
+            {events.map(event => (
+                <EventListItem event={event} key={event.id} />
+
+            ))}
+
         </>
     )
 }
